@@ -1,0 +1,6 @@
+{
+  "name": "El suelo cobra vida - WebAR",
+  "description": "Experiencia WebAR holográfica interactiva donde el suelo frente a Proto Luma se transforma en un ecosistema vivo progresivo.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

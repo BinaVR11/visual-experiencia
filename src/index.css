@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+}
+
+@keyframes holoScan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(1000%);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.4), 0 0 35px rgba(16, 185, 129, 0.2);
+    border-color: rgba(52, 211, 153, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(52, 211, 153, 0.7), 0 0 60px rgba(16, 185, 129, 0.4);
+    border-color: rgba(110, 231, 183, 1);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatSway {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-holo-scan {
+  animation: holoScan 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinSlow 15s linear infinite reverse;
+}
+
+.animate-float-sway {
+  animation: floatSway 4s ease-in-out infinite;
+}
+
+/* Glassmorphism for museum-grade installation interface */
+.holo-panel {
+  background: rgba(8, 18, 16, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(52, 211, 153, 0.08);
+}
+
+.holo-button {
+  background: rgba(16, 40, 32, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.holo-button:hover {
+  background: rgba(52, 211, 153, 0.2);
+  border-color: rgba(110, 231, 183, 0.8);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+}
+
